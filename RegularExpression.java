@@ -21,12 +21,13 @@ public class RegularExpression {
             System.out.println(("Not a valid email address"));
 
 
-//        while(matcher.find()){
-//            String captured = matcher.group(0);
-//            String replaced = matcher.replaceAll("nagalaravi@gmail.com");
-//            //System.out.println("Captured String :"+captured);
-//            System.out.println("Replaced String:"+replaced);
-//        }
+        if (matcher.matches()){
+
+            String captured = matcher.group(0);
+            String replaced = matcher.replaceAll("nagalaravi@gmail.com");
+            System.out.println("Captured String :"+captured);
+            System.out.println("Replaced String:"+replaced);
+        }
 
     }
 }
