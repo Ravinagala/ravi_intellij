@@ -9,7 +9,7 @@ public class ValidPhoneNumber {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number:");
         String n = sc.next();
-        String regex = "^[\\d]{10}+$";
+        String regex = "^[\\d]{10}$";
 
 
         Pattern pattern = Pattern.compile(regex);
