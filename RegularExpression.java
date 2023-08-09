@@ -9,7 +9,7 @@ public class RegularExpression {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a email address :");
         String input = sc.nextLine();
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        String regex = "^[a-z_.-]+[\\d]*@[\\w]+[.][a-z]+$";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
