@@ -35,6 +35,10 @@ public class Person {
             this.subjects = subjects;
         }
 
+        public String getSubjects(){
+            return this.subjects;
+        }
+
         public static void main(String[] args){
             Person p = new Teacher("ravi","ravi@gmail.com","Java"); //upcasting
             if(p instanceof Teacher t){ // instanceof
