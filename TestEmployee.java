@@ -10,6 +10,11 @@ abstract class Employee {
 
     }
 
+    public void print(){
+        System.out.println(this.name);
+        System.out.println(this.desg);
+    }
+
     final public String getDesg() {
         return desg;
     }
@@ -35,6 +40,11 @@ class RegularEmployee extends Employee {
         super(name, desg);
         this.salary = salary;
     }
+
+    @Override
+    public void print(){
+        super.print();
+    }
     @Override
     public int getPay() {
         return salary;
@@ -50,6 +60,11 @@ class Consultant extends Employee {
         this.nohours = nohours;
         this.hourrate = hourrate;
     }
+
+    @Override
+    public void print(){
+        super.print();
+    }
     @Override
     public int getPay() {
         return nohours * hourrate;
@@ -61,12 +76,15 @@ class Consultant extends Employee {
 public class TestEmployee {
     public static void main(String[] args) {
         Employee e = new RegularEmployee("ravi", "developer", 30000); // upcasting
-        System.out.printf("%s  -%s  -%d", e.getName(), e.getDesg(), e.getPay());  // run-time polymorphism
-
+        System.out.printf("%s  -%s  -%d", e.getName(), e.getDesg(), e.getPay());
         System.out.println();
+        e.print(); // run-time polymorphism
+
 
 
         Employee e1 = new Consultant("jai", "system analyst", 8, 400); // upcasting
-        System.out.printf("%s  -%s -%d", e1.getName(), e1.getDesg(), e1.getPay());// run-time polymorphism
+        System.out.printf("%s  -%s -%d", e1.getName(), e1.getDesg(), e1.getPay());
+        System.out.println();
+        e1.print();  // run-time polymorphism
     }
 }
