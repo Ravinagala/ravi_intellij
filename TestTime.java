@@ -26,16 +26,24 @@ class Time implements Comparable<Time> {
         return this.totalSeconds() - other.totalSeconds();
     }
 
+    public int hashCode(){
+        return this.totalSeconds();
+    }
+
 
 }
 
 public class TestTime {
     public static void main(String[] args) {
-        Time[] times = { new Time(10, 20, 30), new Time(1, 2, 3), new Time(9, 10, 10) };
+        Time[] times = { new Time(10, 20, 30), new Time(1, 2, 3), new Time(9, 10, 10), new Time(10,20,30) };
         Arrays.sort(times);
 
-        for (var t : times)
+        for (var t : times){
             System.out.println(t);
+            System.out.println(t.hashCode());
+        }
+
+
     }
 
 }
